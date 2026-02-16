@@ -1,0 +1,109 @@
+.caregiver-dashboard {
+    min-height: 100vh;
+    padding: var(--spacing-xl);
+    animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.dashboard-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--spacing-xs);
+    color: white;
+}
+
+.dashboard-header p {
+    font-size: var(--text-lg);
+    opacity: 0.9;
+}
+
+.status-card {
+    margin-bottom: var(--spacing-xl);
+}
+
+.status-card h3 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--neutral-800);
+}
+
+.progress-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--neutral-50);
+    border-radius: var(--radius);
+}
+
+.progress-label {
+    font-weight: 500;
+    color: var(--neutral-700);
+}
+
+.progress-value {
+    font-weight: 600;
+    color: var(--neutral-800);
+}
+
+.progress-value.positive {
+    color: var(--success);
+}
+
+.demo-note h3 {
+    margin-bottom: var(--spacing-md);
+}
+
+.demo-note p {
+    color: var(--neutral-700);
+    margin-bottom: var(--spacing-md);
+}
+
+.demo-note ul {
+    margin-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.demo-note li {
+    color: var(--neutral-700);
+    margin-bottom: var(--spacing-xs);
+}
+
+.privacy-note {
+    background: var(--primary-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary-500);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .caregiver-dashboard {
+        padding: var(--spacing-md);
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .dashboard-header h1 {
+        font-size: var(--text-3xl);
+    }
+}

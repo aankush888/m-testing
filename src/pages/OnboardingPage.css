@@ -1,0 +1,137 @@
+.onboarding-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.onboarding-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.onboarding-progress {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.progress-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all var(--transition);
+}
+
+.progress-dot.active {
+    background: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.onboarding-card {
+    animation: slideIn var(--transition) ease-out;
+}
+
+.onboarding-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.onboarding-header h1 {
+    color: var(--neutral-800);
+    margin-bottom: var(--spacing-sm);
+}
+
+.onboarding-subtitle {
+    color: var(--neutral-600);
+    font-size: var(--text-lg);
+}
+
+.onboarding-content {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.onboarding-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.onboarding-content h3 {
+    color: var(--neutral-800);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.onboarding-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+.onboarding-list li {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    background: var(--neutral-50);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--primary-500);
+    font-size: var(--text-base);
+    color: var(--neutral-700);
+    transition: all var(--transition-fast);
+}
+
+.onboarding-list li:hover {
+    background: var(--primary-50);
+    transform: translateX(5px);
+}
+
+.onboarding-note {
+    text-align: center;
+    color: var(--neutral-600);
+    font-style: italic;
+    background: var(--primary-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    border: 1px dashed var(--primary-300);
+}
+
+.onboarding-actions {
+    margin-bottom: var(--spacing-lg);
+}
+
+.step-indicator {
+    text-align: center;
+    color: var(--neutral-500);
+    font-size: var(--text-sm);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .onboarding-icon {
+        font-size: 3rem;
+    }
+
+    .onboarding-header h1 {
+        font-size: var(--text-2xl);
+    }
+
+    .onboarding-subtitle {
+        font-size: var(--text-base);
+    }
+}

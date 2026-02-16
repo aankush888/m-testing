@@ -1,0 +1,379 @@
+.activities-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding-bottom: var(--spacing-xl);
+}
+
+.activities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.activities-header h1 {
+    font-size: 2rem;
+    color: white;
+    margin: var(--spacing-md) 0 var(--spacing-xs);
+}
+
+.activities-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.activities-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.activity-category-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    transition: transform 0.3s ease;
+}
+
+.activity-category-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.activity-icon.breathing {
+    background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+}
+
+.activity-icon.meditation {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.activity-icon.grounding {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.activity-category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+.activity-category-card p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+.activity-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.grounding-guide {
+    margin-top: var(--spacing-md);
+    text-align: left;
+}
+
+.grounding-step {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 3px solid var(--color-success);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+}
+
+.grounding-step strong {
+    color: var(--color-success);
+    margin-right: var(--spacing-xs);
+}
+
+/* Breathing Exercise */
+.breathing-exercise-container,
+.meditation-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+.breathing-card,
+.meditation-card {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-xxl);
+}
+
+.breathing-card h2,
+.meditation-card h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+.breathing-subtitle,
+.meditation-subtitle {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+}
+
+.breathing-visualization {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: var(--spacing-xxl) auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breathing-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.4);
+    transition: all 1s ease-in-out;
+}
+
+.breathing-circle.inhale {
+    animation: breatheIn 4s ease-in-out infinite;
+}
+
+.breathing-circle.hold {
+    animation: hold 4s ease-in-out infinite;
+}
+
+.breathing-circle.exhale {
+    animation: breatheOut 4s ease-in-out infinite;
+}
+
+.breathing-circle.pause {
+    animation: pause 4s ease-in-out infinite;
+}
+
+@keyframes breatheIn {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes breatheOut {
+
+    0%,
+    100% {
+        transform: scale(1.3);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes hold {
+
+    0%,
+    100% {
+        transform: scale(1.3);
+        opacity: 0.9;
+    }
+}
+
+@keyframes pause {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.breath-count {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+}
+
+.breathing-instruction {
+    margin: var(--spacing-xl) 0;
+}
+
+.breathing-instruction h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Meditation Timer */
+.meditation-timer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: var(--spacing-xxl) auto;
+}
+
+.timer-ring {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.timer-ring-background {
+    fill: none;
+    stroke: rgba(102, 126, 234, 0.2);
+    stroke-width: 12;
+}
+
+.timer-ring-progress {
+    fill: none;
+    stroke: url(#gradient);
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 565.48;
+    transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.timer-time {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.timer-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-top: var(--spacing-xs);
+}
+
+.meditation-guidance {
+    margin: var(--spacing-xl) 0;
+}
+
+.meditation-guidance p {
+    color: var(--color-text-light);
+    margin: var(--spacing-sm) 0;
+    font-style: italic;
+}
+
+/* Activity Log */
+.activity-log-card {
+    margin-top: var(--spacing-xl);
+}
+
+.activity-log-card h3 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text);
+}
+
+.activity-log-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.activity-log-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: var(--radius-md);
+    transition: background 0.2s ease;
+}
+
+.activity-log-item:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.log-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+}
+
+.log-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.log-details strong {
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.log-meta {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .breathing-visualization {
+        width: 250px;
+        height: 250px;
+    }
+
+    .breathing-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .breath-count {
+        font-size: 3rem;
+    }
+}

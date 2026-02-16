@@ -1,0 +1,129 @@
+.client-insights {
+    min-height: 100vh;
+    padding: var(--spacing-xl);
+}
+
+.insights-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.back-button {
+    margin-bottom: var(--spacing-lg);
+}
+
+.insights-header {
+    text-align: center;
+    color: white;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.insights-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--spacing-sm);
+    color: white;
+}
+
+.insights-header p {
+    font-size: var(--text-lg);
+    opacity: 0.9;
+}
+
+.insights-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.stat-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.stat-value {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--primary-600);
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-label {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--neutral-700);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-sublabel {
+    font-size: var(--text-sm);
+    color: var(--neutral-500);
+}
+
+.chart-card {
+    margin-bottom: var(--spacing-xl);
+}
+
+.chart-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--neutral-800);
+}
+
+.chart-subtitle {
+    color: var(--neutral-600);
+    margin-bottom: var(--spacing-xl);
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--neutral-200);
+    font-size: var(--text-sm);
+    color: var(--neutral-600);
+}
+
+.insights-message {
+    text-align: center;
+    padding: var(--spacing-2xl);
+}
+
+.insights-message h4 {
+    color: white;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--text-xl);
+}
+
+.insights-message p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .client-insights {
+        padding: var(--spacing-md);
+    }
+
+    .insights-header h1 {
+        font-size: var(--text-3xl);
+    }
+
+    .insights-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-value {
+        font-size: var(--text-3xl);
+    }
+}

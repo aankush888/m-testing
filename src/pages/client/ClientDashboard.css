@@ -1,0 +1,175 @@
+.client-dashboard {
+    min-height: 100vh;
+    padding: var(--spacing-xl);
+    animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.dashboard-header {
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-2xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+}
+
+.dashboard-header h1 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--spacing-xs);
+    color: white;
+}
+
+.dashboard-header p {
+    font-size: var(--text-lg);
+    opacity: 0.9;
+}
+
+.dashboard-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.card-subtitle {
+    color: var(--neutral-600);
+    font-size: var(--text-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Mood Quick Check */
+.mood-quick-check h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mood-selector {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+}
+
+.mood-emoji {
+    font-size: 2rem;
+    background: var(--neutral-100);
+    border: 2px solid transparent;
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex: 1;
+}
+
+.mood-emoji:hover {
+    background: var(--primary-50);
+    border-color: var(--primary-500);
+    transform: scale(1.1);
+}
+
+/* Latest Mood */
+.latest-mood .mood-display {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.mood-emoji-large {
+    font-size: 3rem;
+}
+
+.mood-time {
+    font-size: var(--text-sm);
+    color: var(--neutral-500);
+    margin-bottom: var(--spacing-sm);
+}
+
+.mood-feedback {
+    color: var(--neutral-700);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--text-base);
+}
+
+.suggested-activity {
+    background: var(--primary-50);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius);
+    font-size: var(--text-sm);
+    color: var(--primary-700);
+    border-left: 3px solid var(--primary-500);
+}
+
+/* Journal Card */
+.journal-preview {
+    margin-bottom: var(--spacing-md);
+}
+
+.journal-count {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--neutral-800);
+    margin-bottom: var(--spacing-xs);
+}
+
+.journal-last {
+    font-size: var(--text-sm);
+    color: var(--neutral-600);
+}
+
+/* Insights Card */
+.mood-trend-mini {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: flex-end;
+    height: 80px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.trend-dot {
+    flex: 1;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    transition: all var(--transition-fast);
+}
+
+.trend-dot:hover {
+    opacity: 0.8;
+}
+
+/* Tip Card */
+.tip-card {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.tip-card h4 {
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.tip-card p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--text-lg);
+}
+
+@media (max-width: 768px) {
+    .client-dashboard {
+        padding: var(--spacing-md);
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .dashboard-header h1 {
+        font-size: var(--text-3xl);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mood-emoji {
+        font-size: 1.5rem;
+    }
+}

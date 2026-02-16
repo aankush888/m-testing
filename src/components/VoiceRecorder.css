@@ -1,0 +1,194 @@
+.voice-recorder {
+    background: var(--neutral-50);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    border: 2px solid var(--neutral-200);
+}
+
+.recorder-controls {
+    margin-bottom: var(--spacing-lg);
+}
+
+.record-btn {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-md);
+}
+
+.record-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.record-icon {
+    font-size: var(--text-xl);
+}
+
+.recording-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.pause-btn,
+.stop-btn {
+    background: white;
+    border: 2px solid var(--neutral-300);
+    border-radius: var(--radius);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--text-base);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.pause-btn:hover,
+.stop-btn:hover {
+    background: var(--neutral-100);
+    border-color: var(--primary-500);
+}
+
+.recording-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: white;
+    border-radius: var(--radius);
+    border: 2px solid var(--danger);
+}
+
+.recording-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--danger);
+    animation: pulse-recording 1.5s ease-in-out infinite;
+}
+
+.recording-dot.paused {
+    animation: none;
+    background: var(--warning);
+}
+
+@keyframes pulse-recording {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+.recording-time {
+    font-family: monospace;
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--danger);
+}
+
+.waveform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 60px;
+    margin-bottom: var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+}
+
+.waveform-bar {
+    width: 4px;
+    background: var(--primary-500);
+    border-radius: var(--radius-full);
+    animation: wave 1s ease-in-out infinite;
+}
+
+.waveform-bar.paused {
+    animation: none;
+    opacity: 0.5;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: scaleY(0.3);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+.transcription-box {
+    background: white;
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+    border: 2px solid var(--primary-200);
+}
+
+.transcription-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.transcription-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--primary-700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.typing-indicator {
+    color: var(--primary-500);
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.transcription-text {
+    width: 100%;
+    border: none;
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    resize: vertical;
+    padding: var(--spacing-sm);
+    background: var(--neutral-50);
+    border-radius: var(--radius-sm);
+}
+
+.transcription-text:focus {
+    outline: none;
+    background: white;
+}
